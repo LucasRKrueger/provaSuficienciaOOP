@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         public void AddPassageiro(Passageiro passageiro)
         {
-            if (passageiro is null)
+            if (passageiros is null)
             {
                 passageiros = new List<Passageiro>();
                 passageiros.Add(passageiro);
