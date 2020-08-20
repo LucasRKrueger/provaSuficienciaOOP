@@ -5,6 +5,7 @@ using System.Linq;
 namespace WindowsFormsApp1
 {
     //Lucas Rodrigo Krueger
+    [Serializable]
     public class Empresa
     {
         public List<Viagem> Viagens { get; set; }

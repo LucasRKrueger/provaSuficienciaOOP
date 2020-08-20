@@ -3,6 +3,7 @@
 namespace WindowsFormsApp1
 {
     //Lucas Rodrigo Krueger
+    [Serializable]
     public class Idoso : Passageiro
     {              
         public string Rg { get; set; }
@@ -13,9 +14,19 @@ namespace WindowsFormsApp1
             Rg = rg;
         }
 
-        public float GetTarifa()
+        public override float GetTarifa()
         {
             return 0;
+        }
+
+        public  string GetTelefone()
+        {
+            return base.GetTelefone();
+        }
+
+        public string GerarCSV()
+        {
+            return $"I, {GetNome()}, {GetTelefone()}, {GetIdade()}, {Rg}";
         }
     }
 }

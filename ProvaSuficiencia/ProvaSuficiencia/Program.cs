@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1;
 
@@ -9,8 +7,9 @@ namespace ProvaSuficiencia
 {
     static class Program
     {
-        public static List<Passageiro> passageiros = new List<Passageiro>();
-        public static List<Viagem> viagens = new List<Viagem>();
+        //Lucas Rodrigo Krueger
+        public static List<Passageiro> _passageiros = new List<Passageiro>();
+        public static List<Viagem> _viagens = new List<Viagem>();
 
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.

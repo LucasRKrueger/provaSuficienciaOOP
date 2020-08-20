@@ -3,6 +3,7 @@
 namespace WindowsFormsApp1
 {
     //Lucas Rodrigo Krueger
+    [Serializable]
     public class Estudante : Passageiro
     {
         private string Escola { get; set; }        
@@ -13,9 +14,14 @@ namespace WindowsFormsApp1
             Escola = escola;
         }
 
-        public float GetTarifa()
+        public override float GetTarifa()
         {
-            return base.GetTarifa() * 0.5f;
+            return  base.GetTarifa() * 0.5f;
+        }
+
+        public string GerarCSV()
+        {
+            return $"E, {GetNome()}, {GetTelefone()}, {GetIdade()}, {Escola}";
         }
     }
 }

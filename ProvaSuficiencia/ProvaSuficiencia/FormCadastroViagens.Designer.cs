@@ -41,6 +41,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.labelQtdPass = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.rbIntermunicipal = new System.Windows.Forms.RadioButton();
+            this.rbMunicipal = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // label4
@@ -155,11 +157,35 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Clique na tela para atualizar a quantidade de passageiros";
             // 
+            // rbIntermunicipal
+            // 
+            this.rbIntermunicipal.AutoSize = true;
+            this.rbIntermunicipal.Location = new System.Drawing.Point(88, 207);
+            this.rbIntermunicipal.Name = "rbIntermunicipal";
+            this.rbIntermunicipal.Size = new System.Drawing.Size(90, 17);
+            this.rbIntermunicipal.TabIndex = 34;
+            this.rbIntermunicipal.Text = "Intermunicipal";
+            this.rbIntermunicipal.UseVisualStyleBackColor = true;
+            // 
+            // rbMunicipal
+            // 
+            this.rbMunicipal.AutoSize = true;
+            this.rbMunicipal.Checked = true;
+            this.rbMunicipal.Location = new System.Drawing.Point(12, 207);
+            this.rbMunicipal.Name = "rbMunicipal";
+            this.rbMunicipal.Size = new System.Drawing.Size(70, 17);
+            this.rbMunicipal.TabIndex = 33;
+            this.rbMunicipal.TabStop = true;
+            this.rbMunicipal.Text = "Municipal";
+            this.rbMunicipal.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroViagens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 450);
+            this.Controls.Add(this.rbIntermunicipal);
+            this.Controls.Add(this.rbMunicipal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.labelQtdPass);
             this.Controls.Add(this.btnCancelar);
@@ -195,5 +221,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label labelQtdPass;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton rbIntermunicipal;
+        private System.Windows.Forms.RadioButton rbMunicipal;
     }
 }

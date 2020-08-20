@@ -5,6 +5,7 @@ using System.Text;
 namespace WindowsFormsApp1
 {
     //Lucas Rodrigo Krueger
+    [Serializable]
     public class Passageiro
     {
         private string Nome { get; set; }
@@ -19,8 +20,14 @@ namespace WindowsFormsApp1
             Idade = idade;
         }
 
-        public float GetTarifa() { return TarifaInteira; }
+        public virtual float GetTarifa() { return TarifaInteira; }
         public string GetNome(){ return Nome; }
         public int GetIdade() { return Idade; }
+        public string GetTelefone() { return Telefone; }
+
+        public string GerarCSV()
+        {
+            return $"P, {Nome}, {Telefone}, {Idade}";
+        }
     }
 }

@@ -43,9 +43,9 @@
             // 
             // btnViagem
             // 
-            this.btnViagem.Location = new System.Drawing.Point(355, 194);
+            this.btnViagem.Location = new System.Drawing.Point(300, 156);
             this.btnViagem.Name = "btnViagem";
-            this.btnViagem.Size = new System.Drawing.Size(94, 36);
+            this.btnViagem.Size = new System.Drawing.Size(208, 106);
             this.btnViagem.TabIndex = 1;
             this.btnViagem.Text = "Viagens";
             this.btnViagem.UseVisualStyleBackColor = true;
