@@ -34,7 +34,6 @@
             this.labelNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxIdade = new System.Windows.Forms.TextBox();
-            this.txtBoxTelefone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lbRg = new System.Windows.Forms.Label();
             this.txtBoxRg = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.txtBoxEscola = new System.Windows.Forms.TextBox();
             this.cbIdoso = new System.Windows.Forms.CheckBox();
             this.cbEstudante = new System.Windows.Forms.CheckBox();
+            this.txtBoxTelefone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -95,13 +95,6 @@
             this.txtBoxIdade.Name = "txtBoxIdade";
             this.txtBoxIdade.Size = new System.Drawing.Size(35, 20);
             this.txtBoxIdade.TabIndex = 5;
-            // 
-            // txtBoxTelefone
-            // 
-            this.txtBoxTelefone.Location = new System.Drawing.Point(15, 77);
-            this.txtBoxTelefone.Name = "txtBoxTelefone";
-            this.txtBoxTelefone.Size = new System.Drawing.Size(117, 20);
-            this.txtBoxTelefone.TabIndex = 6;
             // 
             // label2
             // 
@@ -166,11 +159,20 @@
             this.cbEstudante.UseVisualStyleBackColor = true;
             this.cbEstudante.CheckedChanged += new System.EventHandler(this.cbEstudante_CheckedChanged);
             // 
+            // txtBoxTelefone
+            // 
+            this.txtBoxTelefone.Location = new System.Drawing.Point(12, 77);
+            this.txtBoxTelefone.Mask = "(99)9 9999-9999";
+            this.txtBoxTelefone.Name = "txtBoxTelefone";
+            this.txtBoxTelefone.Size = new System.Drawing.Size(87, 20);
+            this.txtBoxTelefone.TabIndex = 16;
+            // 
             // FormCadastroPassageiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 450);
+            this.Controls.Add(this.txtBoxTelefone);
             this.Controls.Add(this.cbEstudante);
             this.Controls.Add(this.cbIdoso);
             this.Controls.Add(this.lbEscola);
@@ -178,7 +180,6 @@
             this.Controls.Add(this.lbRg);
             this.Controls.Add(this.txtBoxRg);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxTelefone);
             this.Controls.Add(this.txtBoxIdade);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelNome);
@@ -200,7 +201,6 @@
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxIdade;
-        private System.Windows.Forms.TextBox txtBoxTelefone;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbRg;
         private System.Windows.Forms.TextBox txtBoxRg;
@@ -208,5 +208,6 @@
         private System.Windows.Forms.TextBox txtBoxEscola;
         private System.Windows.Forms.CheckBox cbIdoso;
         private System.Windows.Forms.CheckBox cbEstudante;
+        private System.Windows.Forms.MaskedTextBox txtBoxTelefone;
     }
 }

@@ -37,6 +37,16 @@ namespace ProvaSuficiencia
                 return;
             }
 
+            if(!string.IsNullOrEmpty(txtBoxTelefone.Text))
+            {
+                if(CampoTelefoneIncorreto())
+                {
+                    MessageBox.Show("Favor preencher o campo telefone corretamente.");
+                    txtBoxTelefone.Focus();
+                    return;
+                }
+            }
+
             if(cbIdoso.Checked && string.IsNullOrEmpty(txtBoxRg.Text))
             {
                 MessageBox.Show("Favor preencher o campo Rg");
@@ -76,7 +86,7 @@ namespace ProvaSuficiencia
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        }        
 
         private void cbEstudante_CheckedChanged(object sender, EventArgs e)
         {
@@ -110,6 +120,17 @@ namespace ProvaSuficiencia
                 txtBoxRg.Visible = false;
                 lbRg.Visible = false;
             }
+        }
+
+        private bool CampoTelefoneIncorreto()
+        {
+            int qtdNumeros = 0;
+            for (int i = 0; i < txtBoxTelefone.Text.Length; i++)
+            {
+                if (Char.IsDigit(txtBoxTelefone.Text[i]))
+                    qtdNumeros++;
+            }
+            return qtdNumeros < 11;
         }
     }
 }
